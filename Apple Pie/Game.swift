@@ -20,7 +20,7 @@ struct Game {
     var guessedWord: String {
         var wordToshow = ""
         for letter in word {
-            if guessedLetters.contains(Character(letter.lowercased())) {
+            if guessedLetters.contains(Character(letter.lowercased())) || letter == "-" || letter == " " {
                 wordToshow += String(letter)
             } else {
                wordToshow += "_"
